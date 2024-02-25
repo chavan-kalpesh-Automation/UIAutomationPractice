@@ -1,4 +1,4 @@
-package TestCases;
+package testCases;
 
 import java.time.Duration;
 
