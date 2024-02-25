@@ -80,8 +80,7 @@ public class FillForm extends TestBase {
 		Actions act=new Actions(driver);
 		act.moveToElement(submit).click().build().perform();
 
-//		wait.until(ExpectedConditions.elementToBeClickable(submit));
-//		submit.click();
+
 
 		// after successful submission one success alert pop there to accept
 
