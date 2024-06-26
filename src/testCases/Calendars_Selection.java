@@ -13,7 +13,7 @@ import BaseTest.TestBase;
 
 public class Calendars_Selection extends TestBase {
 
-	public void date_Of_Birth_Selection(String monthYear,String date) {
+	public void date_Of_Birth_Selection(String monthYear, String date) {
 		WebElement calendarbtn = driver.findElement(By.xpath("//div//a[text()='Calendars']"));
 
 		// Scrolling up to calendar button because btn not showing on page we have to
@@ -38,31 +38,26 @@ public class Calendars_Selection extends TestBase {
 
 		act.click(calendar).build().perform();
 
-		
-		int i=0;
-		while(i==0){
-			String currentmonthyear = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']")).getText();
-
-		if (!(currentmonthyear.equals(monthYear))) {
-			driver.findElement(By.xpath("//a[@class='ui-datepicker-prev ui-corner-all']")).click();
+		int i = 0;
+		while (i == 0) {
+			String monthYearPicker = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']")).getText();
+			if (!(monthYearPicker.equals(monthYear))) {
+				WebElement click = driver.findElement(By.xpath("//span[@class='ui-datepicker-month']"));
+				wait.until(ExpectedConditions.elementToBeClickable(click));
+				click.click();
+			} 
+			else
+				break;
 		}
-		else {
-			break;
-		}
 		
-		driver.findElement(By.xpath("//a[text()='"+date+"']")).click();
-		
-	}
-	}
-	
-	
+		driver.findElement(By.xpath("//a[text()='" + date + "']")).click();
 
-
+	}
 
 	public static void main(String[] args) {
 		Calendars_Selection obj = new Calendars_Selection();
 		obj.initialisation();
-		obj.date_Of_Birth_Selection("January 1995","2");
+		obj.date_Of_Birth_Selection("January 1995", "2");
 
 	}
 

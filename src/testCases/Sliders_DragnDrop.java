@@ -24,10 +24,9 @@ public class Sliders_DragnDrop extends TestBase {
 		WebElement slider = driver.findElement(By.xpath("//input[@id='slideMe']"));
 
 		int width = slider.getSize().getWidth();
-//		System.out.println(width);
+		System.out.println(width);
 		int slidewidth = width / 2;
-//		System.out.println(slidewidth);
-//		System.out.println(slider.getSize().getWidth());
+
 
 //		act.clickAndHold(slider).moveByOffset(slidewidth, 0).build().perform();
 		act.clickAndHold(slider).moveToLocation(slidewidth, 0).build().perform();
@@ -37,7 +36,7 @@ public class Sliders_DragnDrop extends TestBase {
 
 		Sliders_DragnDrop obj = new Sliders_DragnDrop();
 		obj.initialisation();
-		obj.slidermethod(65);
+		obj.slidermethod(45);
 	}
 
 }
