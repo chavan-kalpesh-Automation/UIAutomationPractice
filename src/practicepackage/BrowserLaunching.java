@@ -18,6 +18,11 @@ public class BrowserLaunching {
 		driver.get("https://www.google.com/");
 		driver.manage().window().maximize();
 		System.out.println("Browser Launching successfully");
+
+		driver.manage().window().maximize();
+		driver.navigate().refresh();
+		driver.close();
+
 	}
 
 }
