@@ -44,7 +44,7 @@ public class TabSwitchCodingProblem extends TestBase {
 
 			}
 		}
-
+		String primaryWinId = driver.getWindowHandle();
 		Set<String> windows = driver.getWindowHandles();
 		for (String actual : windows) {
 			driver.switchTo().window(actual);
@@ -52,6 +52,8 @@ public class TabSwitchCodingProblem extends TestBase {
 				driver.switchTo().window(actual);
 			}
 		}
+		
+		String secondaryWinId=driver.getWindowHandle();
 		WebElement postmantutorial = driver
 				.findElement(By.xpath("//a[@href='https://automatenow.io/postman-tutorials/']//img"));
 
@@ -59,6 +61,13 @@ public class TabSwitchCodingProblem extends TestBase {
 
 		postmantutorial.click();
 
+		// switch to primary tab
+		driver.switchTo().window(primaryWinId);
+		// navigate back on primary tab
+		driver.navigate().back();
+
+		//switch to new tab
+		driver.switchTo().window(secondaryWinId);
 		WebElement titleofnextpage = driver.findElement(By.xpath("//a[text()='Jump to tutorial list']"));
 
 		wait.until(ExpectedConditions.visibilityOf(titleofnextpage));
