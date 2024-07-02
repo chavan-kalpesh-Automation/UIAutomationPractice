@@ -1,0 +1,64 @@
+package testCases;
+
+import java.time.Duration;
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import BaseTest.TestBase;
+
+public class TabSwitchCodingProblem extends TestBase {
+
+	public static void main(String[] args) {
+
+		TabSwitchCodingProblem object = new TabSwitchCodingProblem();
+		object.initialisation();
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		WebElement tablesButton = driver.findElement(By.xpath("//a[text()='Tables']"));
+
+		js.executeScript("arguments[0].scrollIntoView();", tablesButton);
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		WebElement windowOperationbutton = driver.findElement(By.xpath("//a[text()='Window Operations']"));
+
+		wait.until(ExpectedConditions.elementToBeClickable(windowOperationbutton));
+		try {
+			windowOperationbutton.click();
+		} catch (ElementClickInterceptedException e) {
+			windowOperationbutton.click();
+		}
+		List<WebElement> urls = driver.findElements(By.xpath("//button[@class='custom_btn btn_hover']//b"));
+
+		for (WebElement url : urls) {
+			if (url.getText().contains("New Tab")) {
+				url.click();
+
+			}
+		}
+		Set<String> windows = driver.getWindowHandles();
+		for (String actual : windows) {
+			System.out.println(actual);
+			if (actual.equalsIgnoreCase("12DD7742DF59469DC166C8AF26DAA59D")) {
+				driver.switchTo().window(actual);
+			}
+		}
+		WebElement postmantutorial = driver
+				.findElement(By.xpath("//a[@href='https://automatenow.io/postman-tutorials/']//img"));
+
+		wait.until(ExpectedConditions.elementToBeClickable(postmantutorial));
+
+		postmantutorial.click();
+		
+		
+	}
+
+}
