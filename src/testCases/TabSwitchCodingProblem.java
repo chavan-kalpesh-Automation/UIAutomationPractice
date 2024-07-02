@@ -44,10 +44,11 @@ public class TabSwitchCodingProblem extends TestBase {
 
 			}
 		}
+
 		Set<String> windows = driver.getWindowHandles();
 		for (String actual : windows) {
-			System.out.println(actual);
-			if (actual.equalsIgnoreCase("12DD7742DF59469DC166C8AF26DAA59D")) {
+			driver.switchTo().window(actual);
+			if (driver.getTitle().contains("Home | automateNow")) {
 				driver.switchTo().window(actual);
 			}
 		}
@@ -57,8 +58,13 @@ public class TabSwitchCodingProblem extends TestBase {
 		wait.until(ExpectedConditions.elementToBeClickable(postmantutorial));
 
 		postmantutorial.click();
-		
-		
+
+		WebElement titleofnextpage = driver.findElement(By.xpath("//a[text()='Jump to tutorial list']"));
+
+		wait.until(ExpectedConditions.visibilityOf(titleofnextpage));
+
+		driver.close();
+
 	}
 
 }
