@@ -38,16 +38,18 @@ public class Calendars_Selection extends TestBase {
 
 		act.click(calendar).build().perform();
 
-		int i = 0;
-		while (i == 0) {
+		
+		while (true) {
 			String monthYearPicker = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']")).getText();
-			if (!(monthYearPicker.equals(monthYear))) {
-				WebElement click = driver.findElement(By.xpath("//span[@class='ui-datepicker-month']"));
-				wait.until(ExpectedConditions.elementToBeClickable(click));
-				click.click();
-			} 
-			else
+			
+			if ((monthYearPicker.equals(monthYear))) {
 				break;
+			
+			} 
+			else {
+				WebElement click = driver.findElement(By.xpath("//span[@class='ui-datepicker-month']"));
+			click.click();
+			}
 		}
 		
 		driver.findElement(By.xpath("//a[text()='" + date + "']")).click();
