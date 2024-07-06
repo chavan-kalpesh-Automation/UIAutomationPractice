@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import org.junit.Assert;
 import BaseTest.TestBase;
 
 public class AlertHandelingTestCase extends TestBase {
@@ -51,26 +51,28 @@ public class AlertHandelingTestCase extends TestBase {
 			System.out.println("Confirm Alert Test Case Failled ");
 	}
 
-	public void promptAlertHandeling() {
+	public void promptAlertHandeling(String name) {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath("//div[@class='container pt-1 pb-1']//h1[text()='Popups']")));
 
-		WebElement promptalertPopup = driver
-				.findElement(By.xpath("//button[@id='prompt']//b[text()='Prompt Popup']"));
+		WebElement promptalertPopup = driver.findElement(By.xpath("//button[@id='prompt']//b[text()='Prompt Popup']"));
 		promptalertPopup.click();
 
 		String alertText = driver.switchTo().alert().getText();
 		if (alertText.equalsIgnoreCase("Hi there, what's your name?")) {
-			driver.switchTo().alert().sendKeys("kalpesh");
-			System.out.println("Confirm Alert is visible ;Test Case Passed");
+			driver.switchTo().alert().sendKeys(name);
 			// accept popup
 			driver.switchTo().alert().accept();
-			// cancel popup
-//			driver.switchTo().alert().dismiss();
-
+			System.out.println("Prompt Pop up handled suucessfully " + name);
 		} else
 			System.out.println("Confirm Alert Test Case Failled ");
+
+		WebElement aftersubmittingmessage = driver.findElement(By.xpath("//p[text()='Nice to meet you, kalpesh!']"));
+		String actualTextAfterSubmitting = aftersubmittingmessage.getText();
+		String expectedResultaftersubmitting = "Nice to meet you, " + name + "!";
+		Assert.assertEquals("Prompt Pop up handled suucessfully ", expectedResultaftersubmitting,
+				actualTextAfterSubmitting);
 	}
 
 	public static void main(String[] args) {
@@ -79,9 +81,11 @@ public class AlertHandelingTestCase extends TestBase {
 		WebElement popups = driver.findElement(By.xpath("//a[text()='Popups']"));
 		popups.click();
 
-//		object.SimpleAlertHandeling();
-//		object.confirmPopupHandeling();
-		object.promptAlertHandeling();
+		object.SimpleAlertHandeling();
+		object.confirmPopupHandeling();
+		object.promptAlertHandeling("kalpesh");
+		
+		driver.quit();
 
 	}
 

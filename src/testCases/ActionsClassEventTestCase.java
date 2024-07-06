@@ -65,9 +65,8 @@ public class ActionsClassEventTestCase extends TestBase {
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='Sliders']")));
 		try {
-		slidersbtn.click();
-		}
-		catch(ElementClickInterceptedException e) {
+			slidersbtn.click();
+		} catch (ElementClickInterceptedException e) {
 			slidersbtn.click();
 
 		}
@@ -84,12 +83,77 @@ public class ActionsClassEventTestCase extends TestBase {
 
 	}
 
+	public void mouseHoveringActions() {
+		WebElement hoverBtn = driver.findElement(By.xpath("//a[text()='Hover']"));
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", hoverBtn);
+		try {
+			hoverBtn.click();
+		} catch (ElementClickInterceptedException e) {
+			hoverBtn.click();
+
+		}
+
+		WebElement hoverPageTitile = driver.findElement(By.xpath("//h1[text()='Hover']"));
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(hoverPageTitile));
+
+		WebElement mouseOverOnMe = driver.findElement(By.xpath("//h3[text()='Mouse over me']"));
+		Actions act = new Actions(driver);
+		act.moveToElement(mouseOverOnMe).build().perform();
+
+		WebElement afterMouseHovering = driver.findElement(By.xpath("//h3[text()='You did it!']"));
+		String textafterMouseHovering = afterMouseHovering.getText();
+		if (textafterMouseHovering.equalsIgnoreCase("You did it!")) {
+			System.out.println("Mouse Hovering Actions Passed..");
+		} else
+			System.out.println("Mouse Hovering Action Failed ");
+
+		driver.navigate().back();
+
+	}
+
+	public void mouseClickActions() {
+		WebElement clickEventsBtn = driver.findElement(By.xpath("//a[text()='Click Events']"));
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", clickEventsBtn);
+		try {
+			clickEventsBtn.click();
+		} catch (ElementClickInterceptedException e) {
+			clickEventsBtn.click();
+
+		}
+		WebElement clickEventsPageTitile = driver.findElement(By.xpath("//h1[text()='Click Events']"));
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(clickEventsPageTitile));
+
+		WebElement clickActionOnCatBtn = driver.findElement(By.xpath("//button[@onclick='catSound()']"));
+
+		Actions act = new Actions(driver);
+		act.click(clickActionOnCatBtn).build().perform();
+
+		WebElement catSound = driver.findElement(By.xpath("//h2[text()='Meow!']"));
+		String catSoundtext = catSound.getText();
+		if (catSoundtext.equalsIgnoreCase("Meow!")) {
+			System.out.println("Mouse Click Action Perform Successfully");
+		} else
+			System.out.println("Mouse Click Action Failed");
+		driver.navigate().back();
+
+	}
+
 	public static void main(String[] args) {
 		ActionsClassEventTestCase object = new ActionsClassEventTestCase();
 
 		object.initialisation();
-		object.keyBoardActionUsingActionsClass();
-		object.dragAndDropActionsUsingActionsClass();
+//		object.keyBoardActionUsingActionsClass();
+//		object.dragAndDropActionsUsingActionsClass();
+//		object.mouseHoveringActions();
+		object.mouseClickActions();
 	}
 
 }
