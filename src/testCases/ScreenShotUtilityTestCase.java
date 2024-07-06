@@ -17,7 +17,7 @@ public class ScreenShotUtilityTestCase extends TestBase {
 		ScreenShotUtilityTestCase object = new ScreenShotUtilityTestCase();
 		object.initialisation();
 
-		// TypeCaste the driver into TakesScreenshot class
+		// TypeCaste the driver into TakesScreenshot Interface
 		TakesScreenshot screenshot = (TakesScreenshot) driver;
 		// Define Source output type
 		File Source = screenshot.getScreenshotAs(OutputType.FILE);
@@ -38,3 +38,7 @@ public class ScreenShotUtilityTestCase extends TestBase {
 	}
 
 }
+//Typecast driver into takesscreenshot interface 
+//Define source output type 
+//Define the destination path where screenshot needs to be save 
+//copy source file to destination folder using FileHandler.copy
