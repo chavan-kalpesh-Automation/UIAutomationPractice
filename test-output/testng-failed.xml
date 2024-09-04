@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNGFramework.DataProvidersTestCases">
+      <class name="saucelab_TestPageClasses.LoginPageTestClass">
         <methods>
-          <include name="initialisation"/>
-          <include name="fillForm"/>
+          <include name="logintosaucelab" invocation-numbers="0 1 2 3"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- testNGFramework.DataProvidersTestCases -->
+      </class> <!-- saucelab_TestPageClasses.LoginPageTestClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
