@@ -5,7 +5,8 @@
     <classes>
       <class name="saucelab_TestPageClasses.LoginPageTestClass">
         <methods>
-          <include name="logintosaucelab" invocation-numbers="0 1 2 3"/>
+          <include name="logintosaucelabwithstduser"/>
+          <include name="teardown"/>
           <include name="setup"/>
         </methods>
       </class> <!-- saucelab_TestPageClasses.LoginPageTestClass -->

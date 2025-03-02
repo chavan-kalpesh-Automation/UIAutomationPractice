@@ -21,7 +21,7 @@ public class LoginPageTestClass extends Saucelab_TestBase{
 		 loginpg=new LoginPageClass();
 	}
 	
-	@Test (dataProvider="data")
+	@Test (dataProvider="data",enabled=true)
 	public void logintosaucelab(String username,String passwod ) {
 		loginpg.verifyLoginPage( username, passwod);
 	}
@@ -38,6 +38,11 @@ public class LoginPageTestClass extends Saucelab_TestBase{
 		};
 		
 	}
+	@Test
+	public void logintosaucelabwithstduser(String username,String password) {
+		loginpg.verifyLoginPage(prop.getProperty(username), prop.getProperty(password));
+	}
+	
 	@AfterMethod
 	public void teardown() {
 		driver.quit();

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-03T23:21:30 IST" name="Default suite" finished-at="2024-09-03T23:21:47 IST" duration-ms="17301">
+  <suite started-at="2025-03-02T20:42:01 IST" name="Default suite" finished-at="2025-03-02T20:42:17 IST" duration-ms="16089">
     <groups>
     </groups>
-    <test started-at="2024-09-03T23:21:30 IST" name="Default test" finished-at="2024-09-03T23:21:47 IST" duration-ms="17301">
+    <test started-at="2025-03-02T20:42:01 IST" name="Default test" finished-at="2025-03-02T20:42:17 IST" duration-ms="16089">
       <class name="saucelab_TestPageClasses.LoginPageTestClass">
-        <test-method is-config="true" signature="setup()[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@2cf3d63b]" started-at="2024-09-03T23:21:30 IST" name="setup" finished-at="2024-09-03T23:21:32 IST" duration-ms="1839" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@25ce9dc4]" started-at="2025-03-02T20:42:01 IST" name="setup" finished-at="2025-03-02T20:42:03 IST" duration-ms="2314" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="logintosaucelab(java.lang.String,java.lang.String)[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@2cf3d63b]" started-at="2024-09-03T23:21:32 IST" name="logintosaucelab" data-provider="data" finished-at="2024-09-03T23:21:34 IST" duration-ms="2543" status="PASS">
+        <test-method signature="logintosaucelab(java.lang.String,java.lang.String)[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@25ce9dc4]" started-at="2025-03-02T20:42:03 IST" name="logintosaucelab" data-provider="data" finished-at="2025-03-02T20:42:04 IST" duration-ms="1034" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,11 +27,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintosaucelab -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@2cf3d63b]" started-at="2024-09-03T23:21:34 IST" name="setup" finished-at="2024-09-03T23:21:35 IST" duration-ms="1153" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@25ce9dc4]" started-at="2025-03-02T20:42:04 IST" name="teardown" finished-at="2025-03-02T20:42:04 IST" duration-ms="285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@25ce9dc4]" started-at="2025-03-02T20:42:04 IST" name="setup" finished-at="2025-03-02T20:42:06 IST" duration-ms="1323" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="logintosaucelab(java.lang.String,java.lang.String)[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@2cf3d63b]" started-at="2024-09-03T23:21:35 IST" name="logintosaucelab" data-provider="data" finished-at="2024-09-03T23:21:36 IST" duration-ms="266" status="PASS">
+        <test-method signature="logintosaucelab(java.lang.String,java.lang.String)[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@25ce9dc4]" started-at="2025-03-02T20:42:06 IST" name="logintosaucelab" data-provider="data" finished-at="2025-03-02T20:42:06 IST" duration-ms="325" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -47,11 +51,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintosaucelab -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@2cf3d63b]" started-at="2024-09-03T23:21:36 IST" name="setup" finished-at="2024-09-03T23:21:38 IST" duration-ms="1952" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@25ce9dc4]" started-at="2025-03-02T20:42:06 IST" name="teardown" finished-at="2025-03-02T20:42:06 IST" duration-ms="306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@25ce9dc4]" started-at="2025-03-02T20:42:06 IST" name="setup" finished-at="2025-03-02T20:42:08 IST" duration-ms="1353" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="logintosaucelab(java.lang.String,java.lang.String)[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@2cf3d63b]" started-at="2024-09-03T23:21:38 IST" name="logintosaucelab" data-provider="data" finished-at="2024-09-03T23:21:38 IST" duration-ms="558" status="PASS">
+        <test-method signature="logintosaucelab(java.lang.String,java.lang.String)[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@25ce9dc4]" started-at="2025-03-02T20:42:08 IST" name="logintosaucelab" data-provider="data" finished-at="2025-03-02T20:42:08 IST" duration-ms="527" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -67,11 +75,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintosaucelab -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@2cf3d63b]" started-at="2024-09-03T23:21:38 IST" name="setup" finished-at="2024-09-03T23:21:40 IST" duration-ms="1402" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@25ce9dc4]" started-at="2025-03-02T20:42:08 IST" name="teardown" finished-at="2025-03-02T20:42:09 IST" duration-ms="257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@25ce9dc4]" started-at="2025-03-02T20:42:09 IST" name="setup" finished-at="2025-03-02T20:42:10 IST" duration-ms="1471" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="logintosaucelab(java.lang.String,java.lang.String)[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@2cf3d63b]" started-at="2024-09-03T23:21:40 IST" name="logintosaucelab" data-provider="data" finished-at="2024-09-03T23:21:47 IST" duration-ms="7547" status="PASS">
+        <test-method signature="logintosaucelab(java.lang.String,java.lang.String)[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@25ce9dc4]" started-at="2025-03-02T20:42:10 IST" name="logintosaucelab" data-provider="data" finished-at="2025-03-02T20:42:16 IST" duration-ms="6045" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -87,6 +99,54 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintosaucelab -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@25ce9dc4]" started-at="2025-03-02T20:42:16 IST" name="teardown" finished-at="2025-03-02T20:42:17 IST" duration-ms="802" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="logintosaucelabwithstduser(java.lang.String,java.lang.String)[pri:0, instance:saucelab_TestPageClasses.LoginPageTestClass@25ce9dc4]" started-at="2025-03-02T20:42:17 IST" name="logintosaucelabwithstduser" finished-at="2025-03-02T20:42:17 IST" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Cannot inject @Test annotated Method [logintosaucelabwithstduser] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Cannot inject @Test annotated Method [logintosaucelabwithstduser] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:436)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:350)
+at org.testng.internal.Parameters.createParameters(Parameters.java:693)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:879)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:728)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:911)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logintosaucelabwithstduser -->
       </class> <!-- saucelab_TestPageClasses.LoginPageTestClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

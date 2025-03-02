@@ -32,4 +32,10 @@ public class LoginPageClass extends Saucelab_TestBase {
 		return new HomePageClass();
 
 	}
+	public void loginwiithstduser(String usrname,String pass) {
+		username.sendKeys(usrname);
+		password.sendKeys(pass);
+		login_btn.click();
+		
+	}
 }
